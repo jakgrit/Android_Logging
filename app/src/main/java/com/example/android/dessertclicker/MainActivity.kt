@@ -26,6 +26,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
 import com.example.android.dessertclicker.databinding.ActivityMainBinding
+import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
 
@@ -78,7 +79,8 @@ class MainActivity : AppCompatActivity() {
 
         // Make sure the correct dessert is showing
         binding.dessertButton.setImageResource(currentDessert.imageId)
-        Log.i("MainActivity", "onCreate Called")
+//        Log.i("MainActivity", "onCreate Called")
+        Timber.i("onCreate Called")
     }
 
     /**
@@ -122,7 +124,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        Log.i("MainActivity", "onStart Called")
+//        Log.i("MainActivity", "onStart Called")
+        Timber.i("onStart Called")
     }
 
     /**
@@ -152,4 +155,6 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+
 }
